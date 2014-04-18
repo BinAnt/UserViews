@@ -1,0 +1,129 @@
+* { box-sizing:border-box; }
+
+body { background:url(http://subtlepatterns.com/patterns/little_pluses.png) #cacaca;}
+
+.shadow{
+    background: url(http://maimaiys.com/img/alpha.png) repeat scroll 0% 0%;
+    position: absolute;
+    z-index: 500;
+    border-radius: 15px;
+    height:600px;
+    filter:alpha(opacity=50); 
+    -moz-opacity:0.5; 
+    opacity:0.5;
+}
+#sticky-notes {
+    float: left;
+}
+#create{
+    padding:15px 15px 20px;
+    margin:0 20px 20px 0;
+    width:50px;
+    height:50px;
+}
+
+#create {
+    user-select:none;
+    padding:5px;
+    border-radius:20px;
+    text-align:center;
+    border:5px solid rgba(0,0,0,0.1);
+    cursor:pointer;
+    color:rgba(0,0,0,0.1);
+    font:40px "Helvetica", sans-serif;
+    line-height:85px;
+}
+
+#create:hover { border-color:rgba(0,0,0,0.2); color:rgba(0,0,0,0.2); text-decoration: none;}
+
+a.delete-view{
+    padding:10px 10px 10px;
+    margin:0 20px 20px 0;
+    width:50px;
+    height:50px;
+    border-radius:20px;
+    text-align:center;
+    border:5px solid rgba(0,0,0,0.1);
+    cursor:pointer;
+    color:rgba(0,0,0,0.1);
+    font:30px "Helvetica", sans-serif;
+    line-height:85px;
+    text-decoration: none;
+}
+a.delete-view:hover{border-color:rgba(0,0,0,0.2); color:rgba(0,0,0,0.2); text-decoration: none;}
+
+#addone{
+    width:500px;
+    height:200px;
+    position: absolute;
+    z-index: 1000;
+    border:5px solid rgba(0,0,0,0.2);
+    top:100px;
+    left:150px;
+    background: url(http://subtlepatterns.com/patterns/congruent_outline.png);
+    border-radius: 20px;
+    padding-top:50px;
+}
+#addone{
+     -moz-box-shadow: 5px 5px 5px #ccc;
+      -webkit-box-shadow: 5px 5px 5px #ccc;
+      box-shadow: 5px 5px 5px #ccc;
+      filter:alpha(opacity=50); 
+      -moz-opacity:0.5; 
+      opacity:0.5;
+}
+#addone .one{
+    height: 25px;
+    line-height: 35px;
+    width:400px;
+    margin:0 auto;
+    padding-left: 50px;
+}
+#addone .one label{
+    width:80px;
+    text-align: right;
+    color:#fff;
+}
+span.warn{
+    color:#fff;
+    font-family: '微软雅黑';
+}
+input#btn{
+   width:50px;
+   margin-left:100px;
+}
+textarea {
+    font:20px 'Gloria Hallelujah', cursive;
+    line-height:1.5;
+    border:0;
+    border-radius:3px;
+    background: linear-gradient(#F9EFAF, #F7E98D);
+    background: -webkit-linear-gradient(#F9EFAF, #F7E98D);
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    overflow:hidden;
+    transition:box-shadow 0.5s ease;
+    transition:-webkit-box-shadow 0.5s ease;
+    font-smoothing:subpixel-antialiased;
+    max-width:520px;
+    max-height:250px;
+}
+textarea:hover { box-shadow:0 5px 8px rgba(0,0,0,0.15); }
+textarea:focus { box-shadow:0 5px 12px rgba(0,0,0,0.2); outline:none; }
+
+.delete-sticky{
+    float: left;
+    margin: 5px 0 0 -35px;
+    display: none;
+}
+a.delete-sticky {
+    color: red;
+}
+.sticky-note{
+    float: left;
+}
+.sticky-note:hover .delete-sticky{
+    display: block;
+}
+.clear-both {
+    clear: both;
+}

@@ -1,0 +1,35 @@
+<?php
+// /StickfNotes/view/sticky-notes/sticky-notes/index.phtml
+	$this->headScript()->appendFile($this->basePath().'/js/custom.js');
+?>
+
+
+ <div id="userview">
+    	<table width="800">
+    		<tr>
+    			<th>UserId</th>
+    			<th>UserName</th>
+    			<th>CreateTime</th>
+    			<th>UpdateTime</th>
+    			<th>&nbsp;</th>
+    		</tr>
+    		<?php foreach($userviews as $userview):?>
+	    		<tr>
+	    			<td><?php echo $userview->getId();?></td>
+	    			<td><?php echo $userview->getName();?></td>
+	    			<td><?php echo $userview->getCreatetime(); ?></td>
+	    			<td><?php if($userview->getUpdatetime()){
+	    				echo $userview->getUpdatetime();}else{echo "NeverUpdate";}?>
+	    			</td>
+	    			<td>
+	    				<a id="create">+</a>
+	    				
+	    				<a href="#" id="remove-<?php echo $userview->getId();?>"  class="delete-view">x</a>
+	    			</td>
+	    		</tr>
+    		<?php endforeach; ?>
+    	</table>
+   
+</div>
+
+<div class="clear-both"></div>
